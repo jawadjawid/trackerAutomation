@@ -29,7 +29,7 @@ module.exports = async function (context, req) {
       var myobj = { url: url, email: email, text: innerText };
       dbo.collection("customers").insertOne(myobj, function(err, res) {
         if (err) throw err;
-        console.log("1 document inserted");
+        console.log("1 document inserted to mongo");
         db.close();
       });
     });
